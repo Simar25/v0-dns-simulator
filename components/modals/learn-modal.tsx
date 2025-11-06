@@ -51,15 +51,16 @@ export default function LearnModal({ isOpen, onClose }: LearnModalProps) {
               </h3>
               <div className="space-y-3">
                 <div className="p-4 bg-dns-dark rounded-lg border border-dns-neon/20 hover:border-dns-neon/50 transition-all cursor-pointer">
-                  <p className="font-semibold text-white mb-1">DNS in Action: A Detailed and Practical Guide to DNS Implementation, Configuration, and Administration — Alena Kabelová &amp; Libor Dostálek.</p>
+                  <p className="font-semibold text-white mb-1">{"Behrouz A. Forouzan, Data communication and Networking, 5th Edition, 2017, McGraw Hill Education.\n"}</p>
                   <p className="text-sm text-dns-gray">{""}</p>
                 </div>
                 <div className="p-4 bg-dns-dark rounded-lg border border-dns-neon/20 hover:border-dns-neon/50 transition-all cursor-pointer">
-                  <p className="font-semibold text-white mb-1">{"DNS and BIND (5th Edition)\nCricket Liu & Paul Albitz"}</p>
+                  <p className="font-semibold text-white mb-1">{"James F. Kurose and Keith W.Ross, Computer Networking: A Top-Down Approach, 6th \nEdition, 2017, Pearson Education. "}</p>
                   <p className="text-sm text-dns-gray">{""}</p>
                 </div>
-                <div className="p-4 bg-dns-dark rounded-lg border border-dns-neon/20 hover:border-dns-neon/50 transition-all cursor-pointer">
-                  <p className="font-semibold text-white mb-1">{"{\"The Hidden Potential of DNS in Security\\nJoshua M. Kuo & Ross Gibson\"}"}</p>
+                <div className="p-4 bg-dns-dark rounded-lg border border-dns-neon/20 hover:border-dns-neon/50 transition-all cursor-pointer text-card opacity-100 font-bold">
+                  William Stallings, “Data and Computer Communication”, 10th Edition, 2017, Pearson, 
+                  United Kingdom
                   
                 </div>
               </div>
