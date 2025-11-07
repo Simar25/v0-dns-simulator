@@ -173,7 +173,10 @@ Generated: ${new Date().toLocaleString()}
   }
 
   return (
-    <Card className="bg-gradient-to-b from-slate-800 to-slate-900 border-2 border-cyan-400 p-8 space-y-6 shadow-lg shadow-cyan-400/20">
+    <Card
+      data-download-section
+      className="bg-gradient-to-b from-slate-800 to-slate-900 border-2 border-cyan-400 p-8 space-y-6 shadow-lg shadow-cyan-400/20"
+    >
       <div className="space-y-2">
         <h3 className="text-2xl font-bold text-cyan-300">Download Report</h3>
         <p className="text-sm text-cyan-200">Export detailed DNS resolution data in your preferred format</p>

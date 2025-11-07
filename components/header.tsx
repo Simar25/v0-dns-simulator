@@ -5,9 +5,17 @@ import { Button } from "@/components/ui/button"
 
 interface HeaderProps {
   onOpenModal: (modalName: "learn" | "developedBy" | "help") => void
+  onDownload?: () => void
 }
 
-export default function Header({ onOpenModal }: HeaderProps) {
+export default function Header({ onOpenModal, onDownload }: HeaderProps) {
+  const handleDownloadClick = () => {
+    const downloadSection = document.querySelector("[data-download-section]")
+    if (downloadSection) {
+      downloadSection.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <header className="relative z-50 border-b border-slate-700/30 bg-slate-900/40 backdrop-blur-xl sticky top-0">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/5 via-transparent to-cyan-500/5 opacity-0 hover:opacity-100 transition-opacity duration-500" />
@@ -50,7 +58,10 @@ export default function Header({ onOpenModal }: HeaderProps) {
             <HelpCircle className="w-4 h-4 mr-1.5" />
             Help
           </Button>
-          <Button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:shadow-lg hover:shadow-indigo-500/50 font-bold text-sm transition-all duration-300 ml-2">
+          <Button
+            onClick={handleDownloadClick}
+            className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:shadow-lg hover:shadow-indigo-500/50 font-bold text-sm transition-all duration-300 ml-2"
+          >
             <Download className="w-4 h-4 mr-1.5" />
             Download
           </Button>

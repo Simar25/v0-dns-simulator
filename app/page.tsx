@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Header from "@/components/header"
 import DnsSimulator from "@/components/dns-simulator"
 import LearnModal from "@/components/modals/learn-modal"
@@ -14,12 +14,26 @@ export default function Home() {
     help: false,
   })
 
+  const dnsSimulatorRef = useRef<any>(null)
+
   const openModal = (modalName: keyof typeof modals) => {
     setModals((prev) => ({ ...prev, [modalName]: true }))
   }
 
   const closeModal = (modalName: keyof typeof modals) => {
     setModals((prev) => ({ ...prev, [modalName]: false }))
+  }
+
+  const handleDownload = () => {
+    // Trigger download section by scrolling and clicking first download button
+    const downloadSection = document.querySelector("[data-download-section]")
+    if (downloadSection) {
+      downloadSection.scrollIntoView({ behavior: "smooth" })
+      const firstButton = downloadSection.querySelector("button")
+      if (firstButton) {
+        setTimeout(() => firstButton.click(), 500)
+      }
+    }
   }
 
   return (
@@ -32,8 +46,8 @@ export default function Home() {
         />
       </div>
 
-      <Header onOpenModal={openModal} />
-      <DnsSimulator />
+      <Header onOpenModal={openModal} onDownload={handleDownload} />
+      <DnsSimulator ref={dnsSimulatorRef} />
 
       <LearnModal isOpen={modals.learn} onClose={() => closeModal("learn")} />
       <DevelopedByModal isOpen={modals.developedBy} onClose={() => closeModal("developedBy")} />

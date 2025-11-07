@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Card } from "@/components/ui/card"
 import DnsInput from "./simulator/dns-input"
 import DnsVisualization from "./simulator/dns-visualization"
@@ -28,6 +28,7 @@ export default function DnsSimulator() {
   const [result, setResult] = useState<DnsResult | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [stats, setStats] = useState({ hits: 0, misses: 0 })
+  const downloadSectionRef = useRef<HTMLDivElement>(null)
 
   const handleResolve = async (domain: string, queryType: string, cacheEntries: string[]) => {
     setIsLoading(true)
@@ -61,6 +62,17 @@ export default function DnsSimulator() {
     }))
 
     setIsLoading(false)
+  }
+
+  const handleHeaderDownload = () => {
+    if (downloadSectionRef.current) {
+      downloadSectionRef.current.scrollIntoView({ behavior: "smooth" })
+      // Get the download buttons within the section
+      const downloadButtons = downloadSectionRef.current.querySelectorAll("button")
+      if (downloadButtons.length > 0) {
+        downloadButtons[0].click()
+      }
+    }
   }
 
   return (
@@ -185,7 +197,9 @@ export default function DnsSimulator() {
             </div>
 
             {/* Download Section */}
-            <DownloadSection result={result} stats={stats} />
+            <div ref={downloadSectionRef}>
+              <DownloadSection result={result} stats={stats} />
+            </div>
           </div>
         )}
       </div>

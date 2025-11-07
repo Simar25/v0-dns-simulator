@@ -43,25 +43,59 @@ export default function LearnModal({ isOpen, onClose }: LearnModalProps) {
 
           {/* Content */}
           <div className="flex-1 overflow-y-auto p-6 space-y-8">
-            {/* Textbook Materials */}
             <section className="space-y-4">
               <h3 className="text-lg font-semibold text-dns-neon flex items-center gap-2">
                 <BookOpen className="w-5 h-5" />
-                Textbook Materials
+                Recommended Textbooks & References
               </h3>
               <div className="space-y-3">
                 <div className="p-4 bg-dns-dark rounded-lg border border-dns-neon/20 hover:border-dns-neon/50 transition-all cursor-pointer">
-                  <p className="font-semibold text-white mb-1">{"Behrouz A. Forouzan, Data communication and Networking, 5th Edition, 2017, McGraw Hill Education.\n"}</p>
-                  <p className="text-sm text-dns-gray">{""}</p>
+                  <p className="font-semibold text-white mb-1">James F. Kurose and Keith W. Ross</p>
+                  <p className="text-sm text-dns-gray italic">
+                    "Computer Networking: A Top-Down Approach" - 6th Edition, 2017, Pearson Education
+                  </p>
                 </div>
                 <div className="p-4 bg-dns-dark rounded-lg border border-dns-neon/20 hover:border-dns-neon/50 transition-all cursor-pointer">
-                  <p className="font-semibold text-white mb-1">{"James F. Kurose and Keith W.Ross, Computer Networking: A Top-Down Approach, 6th \nEdition, 2017, Pearson Education. "}</p>
-                  <p className="text-sm text-dns-gray">{""}</p>
+                  <p className="font-semibold text-white mb-1">William Stallings</p>
+                  <p className="text-sm text-dns-gray italic">
+                    "Data and Computer Communication" - 10th Edition, 2017, Pearson, United Kingdom
+                  </p>
                 </div>
-                <div className="p-4 bg-dns-dark rounded-lg border border-dns-neon/20 hover:border-dns-neon/50 transition-all cursor-pointer text-card opacity-100 font-bold">
-                  William Stallings, “Data and Computer Communication”, 10th Edition, 2017, Pearson, 
-                  United Kingdom
-                  
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-lg font-semibold text-dns-neon">Short Notes on DNS</h3>
+              <div className="p-4 bg-dns-dark/50 rounded-lg border border-dns-neon/20 space-y-3">
+                <div>
+                  <p className="text-cyan-300 font-semibold mb-1">What is DNS?</p>
+                  <p className="text-sm text-dns-gray">
+                    Domain Name System (DNS) is a hierarchical distributed naming system that translates human-readable
+                    domain names into IP addresses needed for locating and identifying computer services and devices on
+                    the internet.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-cyan-300 font-semibold mb-1">How DNS Works</p>
+                  <p className="text-sm text-dns-gray">
+                    DNS resolution follows a hierarchical process: Local Cache → Recursive Resolver → Root Nameserver →
+                    TLD Nameserver → Authoritative Nameserver. Each step returns the address of the next server until
+                    the final IP address is resolved.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-cyan-300 font-semibold mb-1">Query Types</p>
+                  <p className="text-sm text-dns-gray">
+                    A (IPv4), AAAA (IPv6), CNAME (Canonical Name), MX (Mail Exchange), NS (Nameserver), TXT (Text
+                    records), SOA (Start of Authority)
+                  </p>
+                </div>
+                <div>
+                  <p className="text-cyan-300 font-semibold mb-1">Caching & TTL</p>
+                  <p className="text-sm text-dns-gray">
+                    DNS records are cached at multiple levels with a Time-To-Live (TTL) value specifying how long the
+                    record remains valid. Higher TTL values reduce queries but cache misses take longer to propagate.
+                  </p>
                 </div>
               </div>
             </section>
@@ -106,7 +140,7 @@ export default function LearnModal({ isOpen, onClose }: LearnModalProps) {
 
             {/* References */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-dns-neon">References</h3>
+              <h3 className="text-lg font-semibold text-dns-neon">Additional References</h3>
               <div className="space-y-2 text-sm text-dns-gray">
                 <p>• IETF RFC 1035 - Domain Names and Implementation</p>
                 <p>• IETF RFC 3597 - Handling of Unknown DNS RR Types</p>

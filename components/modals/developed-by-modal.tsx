@@ -52,23 +52,7 @@ export default function DevelopedByModal({ isOpen, onClose }: DevelopedByModalPr
 
           {/* Content */}
           <div className="flex-1 overflow-y-auto p-8 space-y-8">
-            <div className="p-6 bg-gradient-to-r from-green-500/15 to-cyan-500/15 rounded-xl border-2 border-green-400 space-y-4">
-              <p className="text-xs text-green-300 font-mono uppercase tracking-widest font-bold">Guided By</p>
-              <div className="flex flex-col items-center space-y-4">
-                <div className="w-32 h-32 rounded-full overflow-hidden border-3 border-green-400 shadow-lg shadow-green-400/60">
-                  <img
-                    src="/images/design-mode/WhatsApp%20Image%202025-11-05%20at%2014.48.40_1c028aab.jpg"
-                    alt="Dr. A. Swaminathan"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-green-300">Dr. A. Swaminathan</p>
-                  <p className="text-sm text-green-200 font-mono">Guide & Mentor</p>
-                </div>
-              </div>
-            </div>
-
+            {/* Developer Team */}
             <div className="space-y-4">
               <p className="text-xs text-cyan-300 font-mono uppercase tracking-widest font-bold">Developer Team</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -93,6 +77,26 @@ export default function DevelopedByModal({ isOpen, onClose }: DevelopedByModalPr
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Guided By */}
+            <div className="pt-8 border-t-2 border-cyan-400 space-y-4">
+              <p className="text-xs text-green-300 font-mono uppercase tracking-widest font-bold">Guided By</p>
+              <div className="p-6 bg-gradient-to-r from-green-500/15 to-cyan-500/15 rounded-xl border-2 border-green-400 space-y-4">
+                <div className="flex flex-col items-center space-y-4">
+                  <div className="w-32 h-32 rounded-full overflow-hidden border-3 border-green-400 shadow-lg shadow-green-400/60">
+                    <img
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-11-05%20at%2014.48.40_1c028aab-K0yhmJ8ooVOMbdv25KPrkY021b098s.jpg"
+                      alt="Dr. A. Swaminathan"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-green-300">Dr. A. Swaminathan</p>
+                    <p className="text-sm text-green-200 font-mono">Guide & Mentor</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
