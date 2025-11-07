@@ -1,6 +1,6 @@
 "use client"
 
-import { X, Mail, Github } from "lucide-react"
+import { X, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useEffect } from "react"
 
@@ -26,7 +26,6 @@ export default function DevelopedByModal({ isOpen, onClose }: DevelopedByModalPr
       regNo: "24BCE5218",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-11-07%20at%2019.32.14_30f776d0-UTL3ArXq2OvH8wQtBsKc8VeRxCePcZ.jpg",
-      email: "simaranand250@gmail.com",
       github: "https://github.com/Simar25",
     },
     {
@@ -34,6 +33,7 @@ export default function DevelopedByModal({ isOpen, onClose }: DevelopedByModalPr
       regNo: "24BCE5241",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-11-06%20at%2015.36.10_67ee7591-q2LBjmjmyQsrbenidWAZvuRo0p1txd.jpg",
+      github: "https://github.com/funky1124",
     },
   ]
 
@@ -78,28 +78,17 @@ export default function DevelopedByModal({ isOpen, onClose }: DevelopedByModalPr
                       <p className="text-sm text-green-300 font-mono font-bold">{dev.regNo}</p>
                     </div>
 
-                    {(dev.email || dev.github) && (
-                      <div className="flex justify-center gap-3 pt-2">
-                        {dev.email && (
-                          <a
-                            href={`mailto:${dev.email}`}
-                            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-300 text-sm font-semibold"
-                          >
-                            <Mail className="w-4 h-4" />
-                            Email
-                          </a>
-                        )}
-                        {dev.github && (
-                          <a
-                            href={dev.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-slate-600 to-slate-700 text-white rounded-lg hover:shadow-lg hover:shadow-slate-400/50 transition-all duration-300 text-sm font-semibold"
-                          >
-                            <Github className="w-4 h-4" />
-                            GitHub
-                          </a>
-                        )}
+                    {dev.github && (
+                      <div className="flex justify-center pt-2">
+                        <a
+                          href={dev.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-slate-600 to-slate-700 text-white rounded-lg hover:shadow-lg hover:shadow-slate-400/50 transition-all duration-300 text-sm font-semibold"
+                        >
+                          <Github className="w-4 h-4" />
+                          GitHub
+                        </a>
                       </div>
                     )}
                   </div>
