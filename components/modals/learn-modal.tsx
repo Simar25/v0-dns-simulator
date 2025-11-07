@@ -43,27 +43,7 @@ export default function LearnModal({ isOpen, onClose }: LearnModalProps) {
 
           {/* Content */}
           <div className="flex-1 overflow-y-auto p-6 space-y-8">
-            <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-dns-neon flex items-center gap-2">
-                <BookOpen className="w-5 h-5" />
-                Recommended Textbooks & References
-              </h3>
-              <div className="space-y-3">
-                <div className="p-4 bg-dns-dark rounded-lg border border-dns-neon/20 hover:border-dns-neon/50 transition-all cursor-pointer">
-                  <p className="font-semibold text-white mb-1">James F. Kurose and Keith W. Ross</p>
-                  <p className="text-sm text-dns-gray italic">
-                    "Computer Networking: A Top-Down Approach" - 6th Edition, 2017, Pearson Education
-                  </p>
-                </div>
-                <div className="p-4 bg-dns-dark rounded-lg border border-dns-neon/20 hover:border-dns-neon/50 transition-all cursor-pointer">
-                  <p className="font-semibold text-white mb-1">William Stallings</p>
-                  <p className="text-sm text-dns-gray italic">
-                    "Data and Computer Communication" - 10th Edition, 2017, Pearson, United Kingdom
-                  </p>
-                </div>
-              </div>
-            </section>
-
+            {/* Short Notes section above References */}
             <section className="space-y-4">
               <h3 className="text-lg font-semibold text-dns-neon">Short Notes on DNS</h3>
               <div className="p-4 bg-dns-dark/50 rounded-lg border border-dns-neon/20 space-y-3">
@@ -100,6 +80,7 @@ export default function LearnModal({ isOpen, onClose }: LearnModalProps) {
               </div>
             </section>
 
+            {/* Video Resources */}
             <section className="space-y-4">
               <h3 className="text-lg font-semibold text-dns-neon flex items-center gap-2">
                 <Video className="w-5 h-5" />
@@ -129,6 +110,28 @@ export default function LearnModal({ isOpen, onClose }: LearnModalProps) {
               </div>
             </section>
 
+            {/* Recommended Textbooks & References section below Short Notes */}
+            <section className="space-y-4">
+              <h3 className="text-lg font-semibold text-dns-neon flex items-center gap-2">
+                <BookOpen className="w-5 h-5" />
+                Recommended Textbooks & References
+              </h3>
+              <div className="space-y-3">
+                <div className="p-4 bg-dns-dark rounded-lg border border-dns-neon/20 hover:border-dns-neon/50 transition-all cursor-pointer">
+                  <p className="font-semibold text-white mb-1">James F. Kurose and Keith W. Ross</p>
+                  <p className="text-sm text-dns-gray italic">
+                    "Computer Networking: A Top-Down Approach" - 6th Edition, 2017, Pearson Education
+                  </p>
+                </div>
+                <div className="p-4 bg-dns-dark rounded-lg border border-dns-neon/20 hover:border-dns-neon/50 transition-all cursor-pointer">
+                  <p className="font-semibold text-white mb-1">William Stallings</p>
+                  <p className="text-sm text-dns-gray italic">
+                    "Data and Computer Communication" - 10th Edition, 2017, Pearson, United Kingdom
+                  </p>
+                </div>
+              </div>
+            </section>
+
             {/* How We Built This */}
             <section className="space-y-4">
               <h3 className="text-lg font-semibold text-dns-neon flex items-center gap-2">
@@ -149,7 +152,7 @@ export default function LearnModal({ isOpen, onClose }: LearnModalProps) {
               </div>
             </section>
 
-            {/* References */}
+            {/* Additional References */}
             <section className="space-y-4">
               <h3 className="text-lg font-semibold text-dns-neon">Additional References</h3>
               <div className="space-y-2 text-sm text-dns-gray">
