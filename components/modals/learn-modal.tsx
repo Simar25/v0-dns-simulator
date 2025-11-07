@@ -100,21 +100,32 @@ export default function LearnModal({ isOpen, onClose }: LearnModalProps) {
               </div>
             </section>
 
-            {/* Video Resources */}
             <section className="space-y-4">
               <h3 className="text-lg font-semibold text-dns-neon flex items-center gap-2">
                 <Video className="w-5 h-5" />
                 Video Resources
               </h3>
               <div className="space-y-3">
-                <div className="p-4 bg-dns-dark rounded-lg border border-dns-cyan/20 hover:border-dns-cyan/50 transition-all cursor-pointer">
-                  <p className="font-semibold text-white mb-1">How DNS Works - Animated Explainer</p>
-                  <p className="text-sm text-dns-gray">Complete walkthrough of DNS resolution process</p>
-                </div>
-                <div className="p-4 bg-dns-dark rounded-lg border border-dns-cyan/20 hover:border-dns-cyan/50 transition-all cursor-pointer">
-                  <p className="font-semibold text-white mb-1">DNS Hierarchy Explained</p>
-                  <p className="text-sm text-dns-gray">Root, TLD, and authoritative nameservers</p>
-                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=mpQZVYPuDGU"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 bg-dns-dark rounded-lg border border-dns-cyan/20 hover:border-dns-cyan/50 transition-all"
+                >
+                  <p className="font-semibold text-white mb-1">DNS Explained - How DNS Works</p>
+                  <p className="text-sm text-dns-gray mb-2">Comprehensive guide to DNS resolution and architecture</p>
+                  <p className="text-xs text-dns-cyan">youtube.com/watch?v=mpQZVYPuDGU</p>
+                </a>
+                <a
+                  href="https://www.youtube.com/watch?v=3cvGhO3FTtc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 bg-dns-dark rounded-lg border border-dns-cyan/20 hover:border-dns-cyan/50 transition-all"
+                >
+                  <p className="font-semibold text-white mb-1">DNS Tutorial - Domain Name System</p>
+                  <p className="text-sm text-dns-gray mb-2">Step-by-step DNS resolution process explained</p>
+                  <p className="text-xs text-dns-cyan">youtube.com/watch?v=3cvGhO3FTtc</p>
+                </a>
               </div>
             </section>
 
