@@ -83,8 +83,6 @@ export default function DevelopedByModal({ isOpen, onClose }: DevelopedByModalPr
                         {dev.email && (
                           <a
                             href={`mailto:${dev.email}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
                             className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-300 text-sm font-semibold"
                           >
                             <Mail className="w-4 h-4" />
