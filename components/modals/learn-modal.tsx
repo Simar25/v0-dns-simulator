@@ -80,33 +80,44 @@ export default function LearnModal({ isOpen, onClose }: LearnModalProps) {
               </div>
             </section>
 
-            {/* Video Resources */}
             <section className="space-y-4">
               <h3 className="text-lg font-semibold text-dns-neon flex items-center gap-2">
                 <Video className="w-5 h-5" />
                 Video Resources
               </h3>
-              <div className="space-y-3">
-                <a
-                  href="https://www.youtube.com/watch?v=mpQZVYPuDGU"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-4 bg-dns-dark rounded-lg border border-dns-cyan/20 hover:border-dns-cyan/50 transition-all"
-                >
-                  <p className="font-semibold text-white mb-1">DNS Explained - How DNS Works</p>
-                  <p className="text-sm text-dns-gray mb-2">Comprehensive guide to DNS resolution and architecture</p>
-                  <p className="text-xs text-dns-cyan">youtube.com/watch?v=mpQZVYPuDGU</p>
-                </a>
-                <a
-                  href="https://www.youtube.com/watch?v=3cvGhO3FTtc"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-4 bg-dns-dark rounded-lg border border-dns-cyan/20 hover:border-dns-cyan/50 transition-all"
-                >
-                  <p className="font-semibold text-white mb-1">DNS Tutorial - Domain Name System</p>
-                  <p className="text-sm text-dns-gray mb-2">Step-by-step DNS resolution process explained</p>
-                  <p className="text-xs text-dns-cyan">youtube.com/watch?v=3cvGhO3FTtc</p>
-                </a>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-dns-dark rounded-lg border border-dns-cyan/20 overflow-hidden hover:border-dns-cyan/50 transition-all">
+                  <iframe
+                    width="100%"
+                    height="200"
+                    src="https://www.youtube.com/embed/mpQZVYPuDGU"
+                    title="DNS Explained - How DNS Works"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full"
+                  ></iframe>
+                  <div className="p-3">
+                    <p className="font-semibold text-white text-sm mb-1">DNS Explained - How DNS Works</p>
+                    <p className="text-xs text-dns-gray">Comprehensive guide to DNS resolution and architecture</p>
+                  </div>
+                </div>
+                <div className="bg-dns-dark rounded-lg border border-dns-cyan/20 overflow-hidden hover:border-dns-cyan/50 transition-all">
+                  <iframe
+                    width="100%"
+                    height="200"
+                    src="https://www.youtube.com/embed/3cvGhO3FTtc"
+                    title="DNS Tutorial - Domain Name System"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full"
+                  ></iframe>
+                  <div className="p-3">
+                    <p className="font-semibold text-white text-sm mb-1">DNS Tutorial - Domain Name System</p>
+                    <p className="text-xs text-dns-gray">Step-by-step DNS resolution process explained</p>
+                  </div>
+                </div>
               </div>
             </section>
 
